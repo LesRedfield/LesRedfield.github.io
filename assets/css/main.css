@@ -1922,7 +1922,7 @@
 
 			header.major:before, header.major:after {
 				background: rgba(224, 224, 224, 0.75);
-				/*content: '';*/
+				content: '';
 				display: block;
 				height: 1px;
 				left: 0;
