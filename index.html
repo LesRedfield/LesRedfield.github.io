@@ -24,7 +24,7 @@
 					var rs = this.readyState;
 					if (ind_init || (rs && rs != 'complete' && rs != 'loaded')) return;
 					ind_init = true;
-					Indicative.initialize(apiKey, { recordSessions: true, sessionsThreshold: 1, cookiesOnMainDomain: false, links: true, forms: true });
+					Indicative.initialize(apiKey, { recordSessions: true, sessionsThreshold: 30, cookiesOnMainDomain: false, links: true, forms: true });
 					Indicative.buildEvent('Page View');
 				};
 
