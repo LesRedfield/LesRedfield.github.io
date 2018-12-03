@@ -14,8 +14,8 @@
 			var LES_API_KEY = "c6b940ca-22db-4c79-8f50-033aec83f54f";
 			(function(apiKey) {
 				var ind = document.createElement('script');
-				// ind.src = 'http://cdn.indicative.com/testing/js/Indicative.min.js';
-				ind.src = 'http://cdn.indicative.com/testing/js/Indicative.js';
+				ind.src = 'http://cdn.indicative.com/testing/js/Indicative.min.js';
+				// ind.src = 'http://cdn.indicative.com/testing/js/Indicative.js';
 				// ind.src = 'Indicative.js';
 				ind.type = 'text/javascript';
 				ind.async = 'true';
@@ -24,7 +24,7 @@
 					var rs = this.readyState;
 					if (ind_init || (rs && rs != 'complete' && rs != 'loaded')) return;
 					ind_init = true;
-					Indicative.initialize(apiKey, { recordSessions: true, sessionsThreshold: 30, cookiesOnMainDomain: false, links: true, forms: true });
+					Indicative.initialize(apiKey, { recordSessions: true, sessionsThreshold: 1, cookiesOnMainDomain: false, links: true, forms: true });
 					Indicative.buildEvent('Page View');
 				};
 
