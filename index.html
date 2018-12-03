@@ -8,6 +8,30 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<script type="text/javascript">
+
+			var LES_API_KEY = "c6b940ca-22db-4c79-8f50-033aec83f54f";
+			(function(apiKey) {
+				var ind = document.createElement('script');
+				ind.src = 'http://cdn.indicative.com/testing/js/Indicative.min.js';
+				// ind.src = 'dist/Indicative.js';
+				ind.type = 'text/javascript';
+				ind.async = 'true';
+				var ind_init = false;
+				ind.onload = ind.onreadystatechange = function() {
+					var rs = this.readyState;
+					if (ind_init || (rs && rs != 'complete' && rs != 'loaded')) return;
+					ind_init = true;
+					Indicative.initialize(apiKey, { recordSessions: true, sessionsThreshold: 30, cookiesOnMainDomain: false, links: true, forms: true });
+					Indicative.buildEvent('Page View');
+				};
+
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ind, s);
+			})(LES_API_KEY);
+
+		</script>
 	</head>
 	<body>
 
@@ -59,6 +83,30 @@
 						</div>
 					</section>
 				</div>
+
+				<form class="test" name="test form" onsubmit="window.location = 'assets/Les_Redfield.pdf'">
+					<label for="first">First Name:</label>
+				  <input type="text" name="firstname" value="Mickey" id="first"><br>
+				  Last name:<br>
+				  <input type="text" name="lastname" value="Mouse"><br><br>
+
+					<div>
+		        <input type="checkbox" id="scales" name="feature" value="scales" />
+		        <label for="scales">Scales</label>
+			    </div>
+
+			    <div>
+		        <input type="checkbox" id="horns" name="feature" value="horns" />
+		        <label for="horns">Horns</label>
+			    </div>
+
+			    <div>
+		        <input type="checkbox" id="claws" name="feature" value="claws" />
+		        <label for="claws">Claws</label>
+			    </div>
+
+					<input type="submit" value="Submit">
+				</form>
 
 				<!--
 				<div class="box container">
@@ -276,5 +324,54 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
+			<script type="text/javascript">
+        (function(apiKey) {
+          var ind = document.createElement('script');
+          ind.src = 'IndicativeNew.js';
+          ind.type = 'text/javascript';
+          ind.async = 'true';
+          var ind_init = false;
+          ind.onload = ind.onreadystatechange = function() {
+            var rs = this.readyState;
+            if (ind_init || (rs && rs != 'complete' && rs != 'loaded')) return;
+
+            ind_init = true;
+            Indicative.initialize(apiKey, {
+							recordSessions: true,
+							sessionsThreshold: 15,
+							cookiesOnMainDomain: false,
+							forms: true,
+							links: true,
+							onePageViewEvent: false
+						});
+            Indicative.pageView();
+          };
+
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ind, s);
+        })("c6b940ca-22db-4c79-8f50-033aec83f54f");
+
+// 				document.addEventListener("DOMContentLoaded", function() {
+// 					var links = document.getElementsByTagName("a");
+//
+// debugger;
+//
+// 					Array.from(links).forEach(function(link) {
+// 						link.addEventListener("click", function() {
+// 							var url = event.target.getAttribute('href');
+// 							var linkName = "test - link name";
+// 							event.preventDefault();
+//
+// 							debugger;
+// 							Indicative.buildEvent("Link Click", {Link_Name: linkName}, function () {
+// 								console.log('go to link');
+// 								// if (url) {
+// 	              //   window.location = url;
+// 		            // }
+// 							});
+// 						});
+// 					});
+// 				});
+			</script>
 	</body>
 </html>
