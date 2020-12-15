@@ -371,6 +371,10 @@ table {
     display: block;
 }
 
+#menu-flters ul{
+	padding: 0;
+}
+
 #menu-flters ul li a.active, #menu-flters ul li a:hover {
     background: #041c44;
     color: #fff;
