@@ -242,9 +242,12 @@ header .intro-text {
 	padding: 80px 0;
 }
 #about .about-img {
-	background: #444 url(../img/gallery-bg.jpg) center center no-repeat;
+	background: url(../img/gallery-bg.jpg) center center no-repeat;
 	background-size: cover;
 	height: 570px;
+}
+#about .about-img.gase {
+	background: url(../img/gase.jpg) center center no-repeat;
 }
 #about p {
 	line-height: 24px;
