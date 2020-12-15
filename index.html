@@ -1,378 +1,246 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="lr-favicon.ico" />
-		<title>Les Redfield</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gusto</title>
+<meta name="description" content="">
+<meta name="author" content="">
 
-		<script type="text/javascript">
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-			var LES_API_KEY = "c6b940ca-22db-4c79-8f50-033aec83f54f";
-			(function(apiKey) {
-				var ind = document.createElement('script');
-				ind.src = 'http://cdn.indicative.com/testing/js/Indicative.min.js';
-				// ind.src = 'http://cdn.indicative.com/testing/js/Indicative.js';
-				// ind.src = 'Indicative.js';
-				ind.type = 'text/javascript';
-				ind.async = 'true';
-				var ind_init = false;
-				ind.onload = ind.onreadystatechange = function() {
-					var rs = this.readyState;
-					if (ind_init || (rs && rs != 'complete' && rs != 'loaded')) return;
-					ind_init = true;
-					Indicative.initialize(apiKey, { recordSessions: true, sessionsThreshold: 30, cookiesOnMainDomain: false, links: true, forms: true });
-					Indicative.buildEvent('Page View');
-				};
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(ind, s);
-			})(LES_API_KEY);
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
 
-		</script>
-	</head>
-	<body>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    </div>
 
-		<!-- Header -->
-			<div id="header">
-				<!-- <span class="logo icon fa-paper-plane-o"></span> -->
-        <img class="les-pic" src="images/podium.jpg" alt="" />
-				<h1>Les Redfield</h1>
-				<p>Software Engineer
-				<br />
-				Experience building full-stack apps with JavaScript, React, and Ruby on Rails</p>
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-
-				<header class="major container 75%">
-					<h2>I have a passion for
-					<br />
-					efficiently using data to develop
-					<br />
-					innovative solutions.</h2>
-					<!--
-					<p>Tellus erat mauris ipsum fermentum<br />
-					etiam vivamus nunc nibh morbi.</p>
-					-->
-				</header>
-
-				<div class="box alt container">
-					<section class="feature left">
-						<a href="http://applicative.herokuapp.com/" class="image icon fa-signal"><img src="images/applicative-screenshot.png" alt="" /></a>
-						<div class="content">
-							<h3>Applicative</h3>
-							<p>A business analytics application inspired by enterprise software Indicative. As the full-stack developer, I integrated React Drag-n-Drop with Highcharts.js and a rails backend to power interactive data visualizations, allowing customer engagement and retention statistics to be segmented by demographic data in real-time.</p>
-						</div>
-					</section>
-					<section class="feature right">
-						<a href="http://www.lesredfield.com/october-surprise/" class="image icon fa-signal"><img src="images/october-surprise-screenshot.png" alt="" /></a>
-						<div class="content">
-							<h3>October Surprise</h3>
-							<p>An interactive electoral forecast tool for the 2016 presidential election. Here I use d3.js to bring polling data to life through a map based interface which allows users to simulate electoral preferences for specific voting groups and states, and view real time changes to the overall electoral forecast.</p>
-						</div>
-					</section>
-					<section class="feature left">
-						<a href="https://github.com/LesRedfield/hide_and_sql" class="image icon fa-code"><img src="images/hide-and-sql-screenshot.png" alt="" /></a>
-						<div class="content">
-							<h3>hide_and_sql</h3>
-							<p>A Rails object-relational mapping library based on ActiveRecord. hide_and_sql builds on the functionality of the default Rails ORM, providing customized database interactions for querying purchase funnel data. I wrote this tool in Ruby for use in my full-stack business analytics application in lieu of ActiveRecord.</p>
-						</div>
-					</section>
-				</div>
-
-				<!-- <form class="test" name="test form" onsubmit="window.location = 'assets/Les_Redfield.pdf'">
-					<label for="first">First Name:</label>
-				  <input type="text" name="firstname" value="Mickey" id="first"><br>
-				  Last name:<br>
-				  <input type="text" name="lastname" value="Mouse"><br><br>
-
-					<div>
-		        <input type="checkbox" id="scales" name="feature" value="scales" />
-		        <label for="scales">Scales</label>
-			    </div>
-
-			    <div>
-		        <input type="checkbox" id="horns" name="feature" value="horns" />
-		        <label for="horns">Horns</label>
-			    </div>
-
-			    <div>
-		        <input type="checkbox" id="claws" name="feature" value="claws" />
-		        <label for="claws">Claws</label>
-			    </div>
-
-					<input type="submit" value="Submit">
-				</form> -->
-
-				<!--
-				<div class="box container">
-					<header>
-						<h2>A lot of generic stuff</h2>
-					</header>
-					<section>
-						<header>
-							<h3>Paragraph</h3>
-							<p>This is the subtitle for this particular heading</p>
-						</header>
-						<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-						habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-						leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-						amet risus elit.</p>
-					</section>
-					<section>
-						<header>
-							<h3>Blockquote</h3>
-						</header>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-						tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
-					</section>
-					<section>
-						<header>
-							<h3>Divider</h3>
-						</header>
-						<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-						ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-						facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-						tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-						posuere cubilia.</p>
-						<hr />
-						<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-						ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-						facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-						tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-						posuere cubilia.</p>
-					</section>
-					<section>
-						<header>
-							<h3>Unordered List</h3>
-						</header>
-						<ul class="default">
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						</ul>
-					</section>
-					<section>
-						<header>
-							<h3>Ordered List</h3>
-						</header>
-						<ol class="default">
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						</ol>
-					</section>
-					<section>
-						<header>
-							<h3>Table</h3>
-						</header>
-						<div class="table-wrapper">
-							<table class="default">
-								<thead>
-									<tr>
-										<th>ID</th>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>45815</td>
-										<td>Something</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>24524</td>
-										<td>Nothing</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>45815</td>
-										<td>Something</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>24524</td>
-										<td>Nothing</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>19.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="3"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
-					<section>
-						<header>
-							<h3>Form</h3>
-						</header>
-						<form method="post" action="#">
-							<div class="row">
-								<div class="6u 12u(mobilep)">
-									<label for="name">Name</label>
-									<input class="text" type="text" name="name" id="name" value="" placeholder="John Doe" />
-								</div>
-								<div class="6u 12u(mobilep)">
-									<label for="email">Email</label>
-									<input class="text" type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="12u">
-									<label for="subject">Subject</label>
-									<input class="text" type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="12u">
-									<label for="subject">Message</label>
-									<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-								</div>
-							</div>
-							<div class="row">
-								<div class="12u">
-									<ul class="actions">
-										<li><input type="submit" value="Send" /></li>
-										<li><input type="reset" value="Reset" class="alt" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</section>
-				</div>
-				-->
-
-				<footer class="major container 75%">
-					<h3>About Me</h3>
-					<p>My data science background has always fueled my passion for creating unique and innovative analytics tools.</p>
-					<ul class="actions">
-						<!-- <li><a href="https://docs.google.com/document/d/16jI-lyDu5BLBMERIv1mZDqZdWdUCR0OiISzgUWgI8YU/pub" class="button">View My Resume</a></li> -->
-						<li><a href="assets/Les_Redfield.pdf" class="button">View My Resume</a></li>
-					</ul>
-          <h3>Contact: les.redfield.dev@gmail.com</h3>
-				</footer>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-				<div class="container 75%">
-
-					<!-- <header class="major last">-->
-					<!--	<h2>Contact Me</h2>-->
-					<!--</header>-->
-
-
-
-					<!--<form method="post" action="#">-->
-					<!--	<div class="row">-->
-					<!--		<div class="6u 12u(mobilep)">-->
-					<!--			<input type="text" name="name" placeholder="Name" />-->
-					<!--		</div>-->
-					<!--		<div class="6u 12u(mobilep)">-->
-					<!--			<input type="email" name="email" placeholder="Email" />-->
-					<!--		</div>-->
-					<!--	</div>-->
-					<!--	<div class="row">-->
-					<!--		<div class="12u">-->
-					<!--			<textarea name="message" placeholder="Message" rows="6"></textarea>-->
-					<!--		</div>-->
-					<!--	</div>-->
-					<!--	<div class="row">-->
-					<!--		<div class="12u">-->
-					<!--			<ul class="actions">-->
-					<!--				<li><input type="submit" value="Send Message" /></li>-->
-					<!--			</ul>-->
-					<!--		</div>-->
-					<!--	</div>-->
-					<!--</form>-->
-
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/les-redfield" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<!--<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
-						<li><a href="https://github.com/LesRedfield" class="icon fa-github"><span class="label">Github</span></a></li>
-						<!--<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-					</ul>
-
-					<ul class="copyright">
-						<li>&copy; 2019 lesredfield.com</li>
-            <!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-					</ul>
-
-				</div>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-			<!-- <script type="text/javascript">
-        (function(apiKey) {
-          var ind = document.createElement('script');
-          ind.src = 'IndicativeNew.js';
-          ind.type = 'text/javascript';
-          ind.async = 'true';
-          var ind_init = false;
-          ind.onload = ind.onreadystatechange = function() {
-            var rs = this.readyState;
-            if (ind_init || (rs && rs != 'complete' && rs != 'loaded')) return;
-
-            ind_init = true;
-            Indicative.initialize(apiKey, {
-							recordSessions: true,
-							sessionsThreshold: 15,
-							cookiesOnMainDomain: false,
-							forms: true,
-							links: true,
-							onePageViewEvent: false
-						});
-            Indicative.pageView();
-          };
-
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(ind, s);
-        })("c6b940ca-22db-4c79-8f50-033aec83f54f");
-
-// 				document.addEventListener("DOMContentLoaded", function() {
-// 					var links = document.getElementsByTagName("a");
-//
-// debugger;
-//
-// 					Array.from(links).forEach(function(link) {
-// 						link.addEventListener("click", function() {
-// 							var url = event.target.getAttribute('href');
-// 							var linkName = "test - link name";
-// 							event.preventDefault();
-//
-// 							debugger;
-// 							Indicative.buildEvent("Link Click", {Link_Name: linkName}, function () {
-// 								console.log('go to link');
-// 								// if (url) {
-// 	              //   window.location = url;
-// 		            // }
-// 							});
-// 						});
-// 					});
-// 				});
-			</script> -->
-	</body>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <!-- <li><a href="#features" class="page-scroll">Specials</a></li> -->
+        <li><a href="#about" class="page-scroll">About</a></li>
+        <li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
+        <li><a href="#team" class="page-scroll">Chef</a></li>
+        <li><a href="#contact" class="page-scroll">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>
+<!-- Header -->
+<!-- <header id="header">
+  <div class="intro">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
+            <h1>hi</h1>
+            <p>ya</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header> -->
+<!-- Features Section -->
+<!-- <div id="features" class="text-center">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Specials</h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <h3>Lorem ipsum dolor</h3>
+          <img src="img/specials/1.jpg" class="img-responsive" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <h3>Consectetur adipiscing</h3>
+          <img src="img/specials/2.jpg" class="img-responsive" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <h3>Duis sed dapibus</h3>
+          <img src="img/specials/3.jpg" class="img-responsive" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- About Section -->
+<div id="about">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 about-img"> </div>
+      <div class="col-xs-12 col-md-3 col-md-offset-1">
+        <div class="about-text">
+          <div class="section-title">
+            <h2>Our Story</h2>
+          </div>
+          <p>Natale's Pizzeria was established in 1980 and for the past 30 years has been privileged to serve Waldwick and the surrounding communities. As a family operated business we’ve always purchased the highest quality ingredients and strive to provide the best pick-up and delivery service in the industry. We are proud of our product, service and staff and we truly enjoy serving our customers. We look forward to being a part of this community and serving you for years to come.</p>
+          <p>Thanks for your patronage.<br/>
+The Sernack Family</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Restaurant Menu Section -->
+<div id="restaurant-menu">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Menu</h2>
+    </div>
+    <embed src="img/menu.pdf" width="100%" height="986px" />
+  </div>
+</div>
+<!-- Gallery Section -->
+<div id="gallery">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="img/gallery/01.jpg" class="img-responsive" alt=""></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="img/gallery/02.jpg" class="img-responsive" alt=""></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="img/gallery/03.jpg" class="img-responsive" alt=""></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="img/gallery/04.jpg" class="img-responsive" alt=""></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Team Section -->
+<div id="team">
+  <div class="container">
+    <div id="row">
+      <div class="col-md-6">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="section-title">
+            <h2>Meet Our Chef</h2>
+          </div>
+          <p>Just look at him.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="team-img"><img src="img/chef.jpg" alt="..."></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container text-center">
+    <div class="col-md-4">
+      <h3>Orders</h3>
+      <div class="contact-item">
+        <p>Please call</p>
+        <p>(201) 445-2860</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Address</h3>
+      <div class="contact-item">
+        <p>14 West Prospect St,</p>
+        <p>Waldwick, NJ 07463</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Opening Hours</h3>
+      <div class="contact-item">
+        <p>Sat-Thurs: 11:00 AM - 10:00 PM</p>
+        <p>Fri: 11:00 AM - 11:00 PM</p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container">
+    <div class="section-title text-center">
+      <h3>Send us a message</h3>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+      </form>
+    </div>
+  </div> -->
+</div>
+<div id="footer">
+  <div class="container text-center">
+    <div class="col-md-6">
+      <p>&copy; 2020 Redfield. All rights reserved. Design by <a href="http://www.lesredfield.com" rel="nofollow">gr8lyn</a></p>
+    </div>
+    <div class="col-md-6">
+      <div class="social">
+        <ul>
+          <li><a href="http://www.facebook.com/NatalesPizzeria/"><i class="fa fa-facebook"></i></a></li>
+          <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
